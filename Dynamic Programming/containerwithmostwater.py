@@ -1,5 +1,5 @@
 # My first attempt was this:
-# It passed 49/60 cases. It's too slow.
+# It passed 49/60 cases. It's too slow. It's brute force but its a good starting point.
 
 # Here is my thinking behind it though:
 class Solution:
