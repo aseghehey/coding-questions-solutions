@@ -1,2 +1,2 @@
-# DS-leetcode-questions
-My solutions to leetcode questions on DS and Algorithms
+# Leetcode-questions
+My solutions to leetcode questions on both DS and Algorithms, and others.
