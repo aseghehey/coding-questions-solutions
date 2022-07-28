@@ -30,3 +30,6 @@ def countBits(self, n: int) -> List[int]:
             offset = i # offset becomes the last seen significant bit
         dp[i] = 1 + dp[i-offset] 
     return dp
+
+# For a detailed explanation, go to:
+# https://www.youtube.com/watch?v=UcoN6UjAI64&feature=youtu.be&ab_channel=NeetCode
