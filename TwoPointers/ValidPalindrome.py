@@ -1,6 +1,16 @@
 # Initial solution:
-# Runs in O(n) but its brute force
+# Runs in O(n) but is brute force
 # I wanted to use the two pointers in this approach 
+
+# My second solution which runs faster:    
+def isPalindrome(self, s: str) -> bool:   
+    ans = ''
+    for c in s.lower(): # convert it all to lowercase and go through it
+        if c.isalnum():
+            ans+=c # append it if its alpha numeric
+    return ans == ans[::-1] # if they are the same front and back then its a palindrome
+
+
 
 def isPalindrome(self, s: str) -> bool:   
     if not s: # if string is empty
@@ -19,14 +29,4 @@ def isPalindrome(self, s: str) -> bool:
         r-=1
         
     return True
-   
-# My second solution which runs much more fast    
-def isPalindrome(self, s: str) -> bool:   
-    ans = ''
-    for c in s.lower():
-        if c.isalnum():
-            ans+=c
-    return ans == ans[::-1]
-
-# Neetcode's solution:
 

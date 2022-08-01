@@ -1,12 +1,13 @@
+# runs in O(n^2)
 def threeSum(self, nums: List[int]) -> List[List[int]]:
     nums.sort()
     ans = []
     
     for i, num in enumerate(nums):
-        if i > 0 and num == nums[i-1]:
+        if i > 0 and num == nums[i-1]: # to avoid the issue with duplicates
             continue
         left, right = i+1, len(nums)-1
-        while left < right:
+        while left < right: # we can take a binary search approach
             total = num + nums[left] + nums[right]
             if total > 0:
                 right-=1
@@ -15,7 +16,7 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
             else:
                 ans.append([num, nums[left], nums[right]])
                 left+=1
-                while nums[left] == nums[left-1] and left < right:
+                while nums[left] == nums[left-1] and left < right: # to avoid duplicates as well
                     left+=1
     return ans
         
