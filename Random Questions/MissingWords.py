@@ -27,6 +27,9 @@ t = 'programming'
 
 """
 
+s = 'I love programming with a passion, programming is the beszt thing ever'
+t = 'programming'
+
 def missingWords(s, t):
     i, j = 0,0 
     res = ''
@@ -38,5 +41,5 @@ def missingWords(s, t):
         i += 1
     return res.split()
 
-# print(missingWords(s,t))
+print(missingWords(s,t))
 
