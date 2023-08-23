@@ -21,3 +21,9 @@ if __name__ == "__main__":
             bfs_queue.append([node.right, dpth + 1])
 
     print(res)
+
+''' Alternative solution '''
+def maxDepth(root):
+    if not root:
+        return 0
+    return 1 + max(maxDepth(root.left), maxDepth(root.right))
